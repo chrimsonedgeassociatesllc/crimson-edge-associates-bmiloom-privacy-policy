@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Privacy Policy for BmiLoom, an offline BMI calculator for Android.">
+<title>BmiLoom Privacy Policy</title>
+<style>
+  :root {
+    --primary: #176B5B;
+    --secondary: #55C7A5;
+    --bg: #F5F8F6;
+    --card: #FFFFFF;
+    --text: #172521;
+    --muted: #52655F;
+    --accent: #D7F3E8;
+    --on-accent: #0B3B31;
+    --line: #D3DFDA;
+    --link: #176B5B;
+    --sans: "Avenir Next", "Segoe UI", "Helvetica Neue", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #55C7A5;
+      --secondary: #3FAE8E;
+      --bg: #101A19;
+      --card: #1B2926;
+      --text: #E8F2EE;
+      --muted: #A9BFB8;
+      --accent: #24453D;
+      --on-accent: #D7F3E8;
+      --line: #2E403B;
+      --link: #7ADBBF;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.72;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: var(--link); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Header */
+  .masthead {
+    background: var(--primary);
+    color: #fff;
+    padding: 56px 24px 72px;
+  }
+  @media (prefers-color-scheme: dark) {
+    .masthead { color: #06302A; }
+  }
+  .masthead-inner { max-width: 1040px; margin: 0 auto; }
+  .brand {
+    display: flex; align-items: center; gap: 14px;
+    font-family: var(--sans); font-weight: 700; font-size: 20px; letter-spacing: .01em;
+  }
+  .brand svg { width: 44px; height: 44px; flex: none; }
+  .masthead h1 {
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: clamp(34px, 6.2vw, 62px);
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    margin: 40px 0 0;
+    max-width: 16ch;
+  }
+  .masthead p.sub {
+    font-family: var(--sans);
+    font-size: 18px;
+    margin: 18px 0 0;
+    max-width: 52ch;
+    opacity: .92;
+  }
+
+  /* Layout */
+  .wrap {
+    max-width: 1040px;
+    margin: -36px auto 0;
+    padding: 0 24px 80px;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 48px;
+    align-items: start;
+  }
+  nav.toc {
+    position: sticky; top: 24px;
+    font-family: var(--sans);
+    font-size: 15px;
+    padding-top: 64px;
+  }
+  nav.toc strong { display: block; margin-bottom: 10px; color: var(--muted); font-weight: 600; }
+  nav.toc ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+  nav.toc li a {
+    display: block; padding: 6px 0 6px 14px; margin-left: -2px;
+    border-left: 2px solid transparent; color: var(--muted); text-decoration: none;
+  }
+  nav.toc li a:hover { color: var(--text); border-left-color: var(--primary); }
+
+  main { min-width: 0; }
+
+  /* At a glance panel */
+  .glance {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 28px 28px 22px;
+    box-shadow: 0 1px 0 var(--line);
+  }
+  .glance h2 {
+    font-family: var(--sans); font-size: 22px; margin: 0 0 6px; line-height: 1.25;
+  }
+  .glance p.lead { margin: 0 0 18px; color: var(--muted); font-size: 17px; }
+  .facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .facts li {
+    display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start;
+    font-family: var(--sans); font-size: 16px; line-height: 1.5;
+  }
+  .facts svg { width: 24px; height: 24px; margin-top: 1px; color: var(--primary); }
+
+  .meta {
+    font-family: var(--sans); font-size: 14px; color: var(--muted);
+    margin: 20px 4px 0;
+  }
+
+  /* Sections */
+  section { margin-top: 56px; }
+  section h2 {
+    font-family: var(--sans);
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0 0 14px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+  }
+  section h3 { font-family: var(--sans); font-size: 18px; margin: 26px 0 6px; }
+  section p { margin: 0 0 16px; max-width: 68ch; }
+  section ul { margin: 0 0 16px; padding-left: 1.25em; max-width: 68ch; }
+  section li { margin-bottom: 6px; }
+
+  table {
+    width: 100%; border-collapse: collapse; margin: 8px 0 20px;
+    font-family: var(--sans); font-size: 15px; line-height: 1.5;
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+    display: block; overflow-x: auto;
+  }
+  th, td { text-align: left; padding: 12px 16px; vertical-align: top; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; background: var(--accent); color: var(--on-accent); }
+  tr:last-child td { border-bottom: 0; }
+
+  .note {
+    background: var(--accent); color: var(--on-accent);
+    border-radius: 16px; padding: 18px 22px; margin: 8px 0 18px;
+    font-family: var(--sans); font-size: 16px; line-height: 1.6; max-width: 68ch;
+  }
+
+  footer {
+    max-width: 1040px; margin: 0 auto; padding: 0 24px 56px;
+    font-family: var(--sans); font-size: 14px; color: var(--muted);
+  }
+  footer div { border-top: 1px solid var(--line); padding-top: 20px; }
+
+  @media (max-width: 860px) {
+    .wrap { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    nav.toc { position: static; padding-top: 28px; order: 2; margin-top: 40px; }
+    nav.toc ul { border-left: 0; display: grid; gap: 2px; }
+    nav.toc li a { padding-left: 0; border-left: 0; }
+    body { font-size: 17px; }
+    .masthead { padding: 40px 20px 64px; }
+    .wrap, footer { padding-left: 20px; padding-right: 20px; }
+  }
+  @media print {
+    :root { --bg: #fff; --card: #fff; --text: #000; --muted: #333; --line: #bbb; --accent: #eee; --on-accent: #000; --primary: #000; }
+    .masthead { background: none; color: #000; padding: 0 0 16px; }
+    nav.toc { display: none; }
+    .wrap { display: block; margin-top: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">
+      <svg viewBox="0 0 108 108" aria-hidden="true" focusable="false">
+        <rect width="108" height="108" rx="26" fill="currentColor" opacity=".18"/>
+        <path d="M38.4 69.6A22 22 0 1 1 69.6 69.6" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+        <path d="M54 54L65 41" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="54" cy="54" r="5" fill="currentColor"/>
+      </svg>
+      <span>BmiLoom</span>
+    </div>
+    <h1>BmiLoom collects nothing about you.</h1>
+    <p class="sub">This policy explains what the app stores on your phone, what it never collects, and how you stay in control of your data.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Policy sections">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#scope">About this policy</a></li>
+      <li><a href="#not-collected">What we do not collect</a></li>
+      <li><a href="#on-device">What stays on your device</a></li>
+      <li><a href="#permissions">Permissions</a></li>
+      <li><a href="#third-parties">Third parties</a></li>
+      <li><a href="#control">Your control</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#health">Health information notice</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#changes">Changes to this policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="top">
+    <div class="glance" role="region" aria-labelledby="glance-title">
+      <h2 id="glance-title">The short version</h2>
+      <p class="lead">Everything below is explained in full, but these are the main points.</p>
+      <ul class="facts">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg>
+          <span>We do not collect, receive or share any personal information.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg>
+          <span>The app works offline and does not request internet access.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg>
+          <span>There is no account, no sign-in and no analytics or tracking.</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4.5 4.5L19 7"/></svg>
+          <span>Results you choose to save stay on your device, and you can delete them at any time.</span>
+        </li>
+      </ul>
+    </div>
+    <p class="meta">Effective date: November 6, 2026 &nbsp;|&nbsp; App version: 1.0.0 &nbsp;|&nbsp; Package: com.chrimsonedgeassociates.bmiloom</p>
+
+    <section id="scope">
+      <h2>About this policy</h2>
+      <p>This Privacy Policy applies to BmiLoom, an Android app that calculates body mass index (BMI), published by Chrimson Edge Associates ("we", "us", "our"). It describes how information is handled when you use the app.</p>
+      <p>BmiLoom is designed to work entirely on your device. We built it so that we do not need your personal information in order to provide it.</p>
+    </section>
+
+    <section id="not-collected">
+      <h2>What we do not collect</h2>
+      <p>We do not collect, transmit, sell or share any of the following:</p>
+      <ul>
+        <li>Your name, email address, phone number or any account details (the app has no accounts)</li>
+        <li>Your height, weight, BMI results or any other health or fitness information</li>
+        <li>Your location, contacts, photos, files, microphone or camera data</li>
+        <li>Device identifiers, advertising identifiers or usage analytics</li>
+        <li>Crash reports or diagnostic data sent to us or to anyone else</li>
+      </ul>
+      <p>The developer has no server that receives data from the app.</p>
+    </section>
+
+    <section id="on-device">
+      <h2>What stays on your device</h2>
+      <p>To work as described, the app keeps a small amount of information in its private storage on your phone. This information never leaves your device through the app.</p>
+      <table>
+        <thead>
+          <tr><th>Stored item</th><th>Purpose</th><th>When it is created</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Saved BMI records: date and time, height, weight and BMI</td><td>Shows your History, lets you reopen results and compare two records</td><td>Only when you tap Save result</td></tr>
+          <tr><td>Last entered height and weight</td><td>Fills the calculator with your previous values so you can recalculate quickly</td><td>When you enter valid values or calculate</td></tr>
+          <tr><td>Preferences: theme, default height unit, default weight unit</td><td>Remembers how you like the app to look and behave</td><td>When you change them in Settings</td></tr>
+        </tbody>
+      </table>
+      <p>This data is kept in the app's own storage area, which other apps cannot normally read. Android backup is turned off for BmiLoom, so this data is not included in automatic app backups.</p>
+    </section>
+
+    <section id="permissions">
+      <h2>Permissions</h2>
+      <p>BmiLoom does not request any Android permissions. In particular, it does not ask for internet, network, location, storage, contacts, camera or microphone access.</p>
+    </section>
+
+    <section id="third-parties">
+      <h2>Third parties</h2>
+      <p>BmiLoom does not include advertising, analytics, tracking or crash reporting services, and it does not connect to third-party servers. No information about you is provided to any third party by the app.</p>
+      <p>Your use of Google Play to download or update the app is governed by Google's own terms and privacy policy. We do not control or receive the information Google collects through its services.</p>
+    </section>
+
+    <section id="control">
+      <h2>Your control</h2>
+      <p>You decide what is saved and for how long.</p>
+      <ul>
+        <li><strong>Delete one record:</strong> open History and use the delete button on that record.</li>
+        <li><strong>Delete all records:</strong> use Clear all in History, or Clear calculation history in Settings.</li>
+        <li><strong>Remove everything:</strong> uninstall the app, or clear its storage from Android settings. This removes saved records, your last entered values and your preferences.</li>
+      </ul>
+      <p>Because we do not hold your data, we cannot access, export or delete it for you. All of it is in your hands on your device.</p>
+    </section>
+
+    <section id="children">
+      <h2>Children</h2>
+      <p>BmiLoom is intended for adults. The BMI categories used in the app apply to adults aged 20 and above, and the app is not directed at children under 13. We do not knowingly collect personal information from anyone, including children. If you are a parent or guardian and have a concern, please contact us using the details below.</p>
+    </section>
+
+    <section id="health">
+      <h2>Health information notice</h2>
+      <div class="note">
+        BMI is a screening measure, not a medical diagnosis. It does not directly measure body fat and may not be appropriate for every person. BmiLoom does not provide medical advice. Please speak with a qualified healthcare professional about your health, weight or nutrition.
+      </div>
+    </section>
+
+    <section id="security">
+      <h2>Security</h2>
+      <p>Since the app does not transmit your information, the main protection is that it never leaves your phone. Saved records are stored in the app's private storage. Keeping your device secure, for example with a screen lock and system updates, helps protect any data stored on it.</p>
+    </section>
+
+    <section id="changes">
+      <h2>Changes to this policy</h2>
+      <p>If we change how the app handles information, we will update this page and the effective date at the top. If a future version of the app were to collect any information, this policy would be updated before that version is released, and the Data safety section on Google Play would be updated to match.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you have questions about this Privacy Policy, you can reach us at:</p>
+      <p>
+        Chrimson Edge Associates<br>
+        Email: <a href="mailto:chrimsonedgeassociatesllc@gmail.com">chrimsonedgeassociatesllc@gmail.com</a>
+      </p>
+      <p><a href="#top">Back to the top</a></p>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div>&copy; 2026 Chrimson Edge Associates. BmiLoom is an Android app. Last updated November 6, 2026.</div>
+</footer>
+
+</body>
+</html>
